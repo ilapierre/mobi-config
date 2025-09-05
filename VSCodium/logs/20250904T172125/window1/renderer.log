@@ -1,8 +1,0 @@
-2025-09-04 17:21:26.855 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vsliveshare.vsliveshare' wants API proposal 'notebookCellExecutionState' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
-2025-09-04 17:21:26.867 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.gather' wants API proposal 'notebookCellExecutionState' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
-2025-09-04 17:21:26.867 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.vscode-pylance' wants API proposal 'mcpConfigurationProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
-2025-09-04 17:21:27.077 [info] Started local extension host with pid 55140.
-2025-09-04 17:21:27.138 [info] Started initializing default profile extensions in extensions installation folder. file:///home/ian/.vscode-oss/extensions
-2025-09-04 17:21:27.259 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/ian/.vscode-oss/extensions
-2025-09-04 17:21:27.267 [info] ChatSessionStore: Migrating 0 chat sessions from storage service to file system
-2025-09-04 17:21:30.213 [info] [perf] Render performance baseline is 132ms
