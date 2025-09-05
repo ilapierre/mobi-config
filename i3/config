@@ -183,7 +183,7 @@ exec_always --no-startup-id polybar
 
 gaps inner 10
 
-for_window [class=".*"] border pixel 4
+for_window [class=".*"] border pixel 0
 
 # start picom for animations and prettier workspaces
 exec_always --no-startup-id picom --config=$HOME/.config/picom/picom.conf
