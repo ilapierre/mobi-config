@@ -1,2 +1,3 @@
-2025/09/04-17:21:35.123 d6de Creating DB /home/ian/.config/VSCodium/Session Storage since it was missing.
-2025/09/04-17:21:35.129 d6de Reusing MANIFEST /home/ian/.config/VSCodium/Session Storage/MANIFEST-000001
+2025/09/07-14:31:32.016 37fa Reusing MANIFEST /home/ian/.config/VSCodium/Session Storage/MANIFEST-000001
+2025/09/07-14:31:32.016 37fa Recovering log #3
+2025/09/07-14:31:32.017 37fa Reusing old log /home/ian/.config/VSCodium/Session Storage/000003.log 

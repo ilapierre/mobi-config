@@ -4,19 +4,19 @@
     "telemetry.devDeviceId": "9233e5f0-1159-453d-b02a-bf5105a9a337",
     "backupWorkspaces": {
         "workspaces": [],
-        "folders": [],
-        "emptyWindows": [
+        "folders": [
             {
-                "backupFolder": "1757020886348"
+                "folderUri": "file:///home/ian/Workspace/3c3_ian_lapierre"
             }
-        ]
+        ],
+        "emptyWindows": []
     },
-    "windowControlHeight": 35,
+    "windowControlHeight": 60,
     "profileAssociations": {
-        "workspaces": {},
-        "emptyWindows": {
-            "1757020886348": "__default__profile__"
-        }
+        "workspaces": {
+            "file:///home/ian/Workspace/3c3_ian_lapierre": "__default__profile__"
+        },
+        "emptyWindows": {}
     },
     "theme": "vs-dark",
     "themeBackground": "#1f1f1f",
@@ -42,7 +42,7 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 0,
+            "sideBarWidth": 300,
             "auxiliaryBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
@@ -50,15 +50,29 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/ian/.config/VSCodium/Backups/1757020886348",
+            "folder": "file:///home/ian/Workspace/3c3_ian_lapierre",
+            "backupPath": "/home/ian/.config/VSCodium/Backups/e759a5c86f8afaf66d4eca48af7328fa",
             "uiState": {
-                "mode": 0,
+                "mode": 1,
                 "x": 10,
                 "y": 10,
-                "width": 1900,
-                "height": 1037
+                "width": 1705,
+                "height": 1397,
+                "zoomLevel": 3
             }
         },
         "openedWindows": []
+    },
+    "windowSplashWorkspaceOverride": {
+        "layoutInfo": {
+            "sideBarWidth": 300,
+            "auxiliaryBarWidth": 300,
+            "workspaces": {
+                "21735c0af95ab999ba01898921e8849f": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                }
+            }
+        }
     }
 }

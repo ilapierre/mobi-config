@@ -179,7 +179,11 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Start polybar to display a workspace bar
-exec_always --no-startup-id polybar
+# exec_always --no-startup-id polybar
+
+bar {
+	status_command i3status
+}
 
 gaps inner 10
 
@@ -187,3 +191,12 @@ for_window [class=".*"] border pixel 0
 
 # start picom for animations and prettier workspaces
 exec_always --no-startup-id picom --config=$HOME/.config/picom/picom.conf
+
+# Adjust screen
+exec_always --no-startup-id xrandr --output HDMI-A-0 --mode 3440x1440 --rate 160 --above eDP
+
+#WARNING: Start syncthing
+exec syncthing
+
+# keyboard layouts
+exec --no-startup-id setxkbmap -option '' -layout us,ca -variant ,fr -option grp:alt_shift_toggle
