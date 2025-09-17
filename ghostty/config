@@ -44,4 +44,5 @@
 
 window-decoration = none
 background-opacity = 0.8
+font-family = JetBrainsMono Nerd Font
 font-size = 20

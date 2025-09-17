@@ -200,3 +200,7 @@ exec syncthing
 
 # keyboard layouts
 exec --no-startup-id setxkbmap -option '' -layout us,ca -variant ,fr -option grp:alt_shift_toggle
+
+# adjust brightness (for MOBI)
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
