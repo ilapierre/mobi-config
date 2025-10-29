@@ -1,41 +1,40 @@
-vim.opt.wrap = false -- disable text wrapping
-
--- line number
 vim.opt.number = true
 vim.opt.relativenumber = true
-
--- clipboard
 vim.opt.clipboard:append { 'unnamed', 'unnamedplus' }
 
--- enable built-in indent scripts
-vim.cmd("filetype plugin indent on")
-
--- tabline
-vim.opt.showtabline = 1
-
--- cursor
-vim.opt.guicursor = "n-v-i-c:block-Cursor"
-
--- WARNING: Might be funky.
--- dynamic indentation
-vim.api.nvim_create_augroup("FileTypeIndent", { clear = true })
-
+-- Indenting per lang | Add more if needed
 vim.api.nvim_create_autocmd("FileType", {
-  group = "FileTypeIndent",
-  pattern = "python",
+  pattern = "java",
   callback = function()
-    vim.bo.tabstop = 4
     vim.bo.shiftwidth = 4
+    vim.bo.tabstop = 4
     vim.bo.expandtab = true
-  end,
+  end
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  group = "FileTypeIndent",
-  pattern = { "javascript", "lua", "html" },
+  pattern = "python",
   callback = function()
-    vim.bo.tabstop = 2
-    vim.bo.shiftwidth = 2
+    vim.bo.shiftwidth = 4
+    vim.bo.tabstop = 4
     vim.bo.expandtab = true
-  end,
+  end
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "c",
+  callback = function()
+    vim.bo.shiftwidth = 4
+    vim.bo.tabstop = 4
+    vim.bo.expandtab = false
+  end
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "lua",
+  callback = function()
+    vim.bo.shiftwidth = 2
+    vim.bo.tabstop = 2
+    vim.bo.expandtab = true
+  end
 })
