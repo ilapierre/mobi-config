@@ -179,11 +179,11 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Start polybar to display a workspace bar
-# exec_always --no-startup-id polybar
+exec --no-startup-id polybar
 
-bar {
-	status_command i3status
-}
+# bar {
+# 	status_command i3status
+# }
 
 gaps inner 10
 
@@ -204,3 +204,6 @@ exec --no-startup-id setxkbmap -option '' -layout us,ca -variant ,fr -option grp
 # adjust brightness (for MOBI)
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
+
+# Wallpaper
+exec --no-startup-id feh --bg-fill $HOME/Images/catppuccin-stalker.jpg

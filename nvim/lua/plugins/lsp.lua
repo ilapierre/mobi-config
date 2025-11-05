@@ -67,6 +67,13 @@ return {
   { "hrsh7th/cmp-buffer" },
   { "hrsh7th/cmp-path" },
   { "hrsh7th/cmp-cmdline" },
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("lsp_signature").setup()
+    end
+  },
 
   -- Snippets
   { "L3MON4D3/LuaSnip" },
