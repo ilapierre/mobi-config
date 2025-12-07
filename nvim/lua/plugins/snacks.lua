@@ -1,5 +1,3 @@
--- snacks = collection of plugins QOL
-
 return {
   "folke/snacks.nvim",
   priority = 1000,
@@ -9,5 +7,5 @@ return {
     indent = { enabled = true },
     dashboard = { enabled = true },
     quickfile = { enabled = true },
-   }
+  }
 }
