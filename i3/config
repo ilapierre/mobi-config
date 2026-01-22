@@ -206,4 +206,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill $HOME/Images/catppuccin-stalker.jpg
+exec --no-startup-id feh --bg-fill $HOME/Images/Wallpapers/catppuccin-stalker.jpg
+
+# Natural scrolling
+exec --no-startup-id xinput set-prop "SYNA30AD:00 06CB:CDEC Touchpad" "libinput Natural Scrolling Enabled" 1
