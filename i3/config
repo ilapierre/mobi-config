@@ -210,3 +210,6 @@ exec --no-startup-id feh --bg-fill $HOME/Images/Wallpapers/catppuccin-stalker.jp
 
 # Natural scrolling
 exec --no-startup-id xinput set-prop "SYNA30AD:00 06CB:CDEC Touchpad" "libinput Natural Scrolling Enabled" 1
+
+# nm-applet
+exec_always --no-startup-id nm-applet &
