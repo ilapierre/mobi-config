@@ -40,7 +40,7 @@ floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
+# tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -200,7 +200,7 @@ for_window [class=".*"] border pixel 0
 exec_always --no-startup-id picom --config=$HOME/.config/picom/picom.conf
 
 # Adjust screen
-exec_always --no-startup-id xrandr --output HDMI-A-0 --mode 3440x1440 --rate 160 --above eDP
+# exec_always --no-startup-id xrandr --output HDMI-A-0 --mode 3440x1440 --rate 160 --above eDP
 
 #WARNING: Start syncthing
 exec syncthing
