@@ -5,7 +5,7 @@ hide_window_decorations yes
 # hide_window_decorations no
 
 # Background
-background_opacity 0.63
+background_opacity 0.50
 background_blur 90
 
 # Font
@@ -25,3 +25,9 @@ font_size 23
 # cursor_blink true
 
 enable_audio_bell no
+
+
+# BEGIN_KITTY_THEME
+# Catppuccin-Mocha
+include current-theme.conf
+# END_KITTY_THEME

@@ -1,6 +1,5 @@
 configuration {
     show-icons: true;
-
     display-ssh:    "󰣀 ssh:";
     display-run:    "󱓞 run:";
     display-drun:   "󰣖 drun:";
@@ -9,4 +8,4 @@ configuration {
     display-filebrowser: "󰉋 filebrowser:";
 }
 
-@theme "~/.config/rofi/catppuccin-lavrent-mocha.rasi"
+@theme "~/.config/rofi/style/theme.rasi"
