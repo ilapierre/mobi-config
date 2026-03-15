@@ -5,10 +5,10 @@ set = true
 
 command = "swww img --transition-type center {{ image }}"
 
-[templates.waybar]
-input_path = '~/.config/matugen/templates/waybar.css'
-output_path = '~/.config/waybar/colors.css'
-post_hook = "pkill -SIGUSR2 waybar"
+# [templates.waybar]
+# input_path = '~/.config/matugen/templates/waybar.css'
+# output_path = '~/.config/waybar/colors.css'
+# post_hook = "pkill -SIGUSR2 waybar"
 
 # [templates.kitty]
 # input_path = '~/.config/matugen/colors.css'
@@ -22,6 +22,11 @@ output_path = '~/.config/hypr/colors.conf'
 [templates.rofi]
 input_path = '~/.config/matugen/templates/rofi.rasi'
 output_path = '~/.config/rofi/colors.rasi'
+
+[templates.openrgb]
+input_path = '~/.config/matugen/templates/openrgb.txt'
+output_path = '~/.config/matugen/scripts/openrgb/colorscheme.txt'
+post_hook = "python ~/.config/matugen/scripts/openrgb/rgb.py"
 
 # custom
 [templates.ashell]
