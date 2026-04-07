@@ -1,11 +1,11 @@
 log_level = "ashell=debug"
 outputs = "All"
-position = "Top"
+position = "Bottom"
 
 [modules]
-left = [ "Clock", "WindowTitle",]
+left = [ "Clock", "SystemInfo", "WindowTitle",]
 center = [ "Workspaces",]
-right = [ "KeyboardLayout", "SystemInfo", "Clock", "Settings",]
+right = [ "KeyboardLayout", "MediaPlayer", "Tray", "Settings",]
 
 [settings]
 shutdown_cmd = "poweroff"
@@ -15,9 +15,10 @@ indicators = [ "Audio", "Battery", "Bluetooth", "Network",]
 
 [appearance]
 font_name = "JetBrainsMono Nerd Font Mono"
-scale_factor = 1.4
+scale_factor = 1.6
 success_color = "#a6e3a1"
 text_color = "#cdd6f4"
+style = "Solid"
 
 [appearance.primary_color]
 base = "#0d4a73"

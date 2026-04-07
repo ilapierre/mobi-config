@@ -14,7 +14,7 @@ alias ovim="vim"
 export PATH="/home/ian/.local/bin:$PATH"
 
 # node version manager
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
 
 # exa (ls) aliases
 # general use
@@ -28,3 +28,5 @@ alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale --icons=au
 # bat (cat) aliases
 alias cat='bat -pp'
 alias cats='bat'
+
+export PATH=$PATH:/home/ian/.spicetify

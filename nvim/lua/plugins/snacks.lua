@@ -13,7 +13,7 @@ return {
         sections = {
           {
             section = "terminal",
-            cmd = "chafa ~/Pictures/grandfather-tree.jpg --stretch; sleep .1",
+            cmd = "chafa ~/Pictures/black-blue.png --stretch; sleep .1",
             height = 17,
             padding = 1,
           },
