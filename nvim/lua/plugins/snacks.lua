@@ -12,13 +12,7 @@ return {
         enabled = true,
         sections = {
           {
-            section = "terminal",
-            cmd = "chafa ~/Pictures/black-blue.png --stretch; sleep .1",
-            height = 17,
-            padding = 1,
-          },
-          {
-            pane = 2,
+            pane = 1,
             { section = "keys", gap = 1, padding = 1 },
             { section = "startup" }
           }
@@ -29,11 +23,14 @@ return {
       { "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files" },
       { "<leader>fg", function() Snacks.picker.grep() end,  desc = "Grep in Files" },
       { "<leader>fr", function() Snacks.picker.recent() end,  desc = "Recent Files" },
-
       { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Config Files" },
 
       { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
       { "gD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" },
+      { "gr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
+
+      { "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
+      { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
     }
   },
   {

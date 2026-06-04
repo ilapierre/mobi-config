@@ -1,17 +1,13 @@
-dconf/
-go/
-gtk*/
-kde.org/
-libvirt/
-procps/
-pulse/
-Slack/
-session/
-spotify/
-systemd/
-yay/
-VSCodium/
-ticktick/
-Windscribe/
-autostart/
-.mozilla/
+# Ignore everything but specified directories
+*
+
+# Config files
+!.gitignore
+!nvim/
+!tmux/
+!hypr/
+!noctalia/
+!kitty/
+
+# Wallpapers & Resources
+!assets/

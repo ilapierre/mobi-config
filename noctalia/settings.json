@@ -6,7 +6,7 @@
         "clipboardWrapText": true,
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
-        "density": "default",
+        "density": "comfortable",
         "enableClipPreview": true,
         "enableClipboardChips": true,
         "enableClipboardHistory": false,
@@ -24,7 +24,7 @@
         "showCategories": true,
         "showIconBackground": false,
         "sortByMostUsed": true,
-        "terminalCommand": "alacritty -e",
+        "terminalCommand": "kitty -e",
         "viewMode": "list"
     },
     "audio": {
@@ -42,11 +42,11 @@
     "bar": {
         "autoHideDelay": 500,
         "autoShowDelay": 150,
-        "backgroundOpacity": 0.93,
+        "backgroundOpacity": 0.75,
         "barType": "framed",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
-        "contentPadding": 0,
+        "contentPadding": 2,
         "density": "spacious",
         "displayMode": "always_visible",
         "enableExclusionZoneInset": true,
@@ -64,7 +64,7 @@
         "mouseWheelAction": "none",
         "mouseWheelWrap": true,
         "outerCorners": true,
-        "position": "bottom",
+        "position": "top",
         "reverseScroll": false,
         "rightClickAction": "controlCenter",
         "rightClickCommand": "",
@@ -74,7 +74,7 @@
         "showCapsule": true,
         "showOnWorkspaceSwitch": true,
         "showOutline": false,
-        "useSeparateOpacity": false,
+        "useSeparateOpacity": true,
         "widgetSpacing": 20,
         "widgets": {
             "center": [
@@ -102,16 +102,6 @@
             ],
             "left": [
                 {
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "rocket",
-                    "iconColor": "none",
-                    "id": "Launcher",
-                    "useDistroLogo": false
-                },
-                {
                     "clockColor": "none",
                     "customFont": "",
                     "formatHorizontal": "HH:mm ddd, MMM dd",
@@ -129,9 +119,9 @@
                     "showCpuFreq": false,
                     "showCpuTemp": true,
                     "showCpuUsage": true,
-                    "showDiskAvailable": false,
-                    "showDiskUsage": false,
-                    "showDiskUsageAsPercent": false,
+                    "showDiskAvailable": true,
+                    "showDiskUsage": true,
+                    "showDiskUsageAsPercent": true,
                     "showGpuTemp": false,
                     "showLoadAverage": false,
                     "showMemoryAsPercent": false,
@@ -172,15 +162,53 @@
             ],
             "right": [
                 {
-                    "blacklist": [
-                    ],
-                    "chevronColor": "none",
-                    "colorizeIcons": false,
-                    "drawerEnabled": true,
-                    "hidePassive": false,
-                    "id": "Tray",
-                    "pinned": [
-                    ]
+                    "deviceNativePath": "__default__",
+                    "displayMode": "graphic-clean",
+                    "hideIfIdle": false,
+                    "hideIfNotDetected": true,
+                    "id": "Battery",
+                    "showNoctaliaPerformance": false,
+                    "showPowerProfiles": false
+                },
+                {
+                    "defaultSettings": {
+                        "aurCmd": "paru -Qua 2>/dev/null",
+                        "boldText": true,
+                        "boldVer": true,
+                        "boldVerDesktop": true,
+                        "boldVerPanel": true,
+                        "closeButton": false,
+                        "customIconPath": "",
+                        "desktopTip": true,
+                        "enableColorization": false,
+                        "flatpak": true,
+                        "hideOnEmpty": false,
+                        "hoverTip": true,
+                        "iconColor": "none",
+                        "iconName": "arrow-big-down-lines",
+                        "noctalia": true,
+                        "refreshInterval": 120,
+                        "refreshTimer": true,
+                        "systemCmd": "checkupdates 2>/dev/null",
+                        "toast": true,
+                        "tooltip": true,
+                        "updateCmd": "ghostty -e bash -c 'echo \"Updating System...\";paru; flatpak update; read -n 1 -p \"Press any key to exit...\"'",
+                        "useDistroLogo": false
+                    },
+                    "id": "plugin:arch-updater"
+                },
+                {
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "Network",
+                    "textColor": "none"
+                },
+                {
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "Volume",
+                    "middleClickCommand": "pwvucontrol || pavucontrol",
+                    "textColor": "none"
                 },
                 {
                     "hideWhenZero": false,
@@ -191,30 +219,20 @@
                     "unreadBadgeColor": "primary"
                 },
                 {
-                    "deviceNativePath": "__default__",
-                    "displayMode": "graphic-clean",
-                    "hideIfIdle": false,
-                    "hideIfNotDetected": true,
-                    "id": "Battery",
-                    "showNoctaliaPerformance": false,
-                    "showPowerProfiles": false
+                    "blacklist": [
+                    ],
+                    "chevronColor": "none",
+                    "colorizeIcons": false,
+                    "drawerEnabled": true,
+                    "hidePassive": false,
+                    "id": "Tray",
+                    "pinned": [
+                        "Discord"
+                    ]
                 },
                 {
-                    "displayMode": "onhover",
-                    "iconColor": "none",
-                    "id": "Volume",
-                    "middleClickCommand": "pwvucontrol || pavucontrol",
-                    "textColor": "none"
-                },
-                {
-                    "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "noctalia",
-                    "id": "ControlCenter",
-                    "useDistroLogo": false
+                    "iconColor": "error",
+                    "id": "SessionMenu"
                 }
             ]
         }
@@ -690,7 +708,7 @@
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "dark souls black",
+        "wallhavenQuery": "stalker",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
