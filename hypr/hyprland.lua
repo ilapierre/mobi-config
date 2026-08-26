@@ -148,6 +148,7 @@ hl.bind(mainMod .. "+M",       hl.dsp.exec_cmd("command -v hyprshutdown >/dev/nu
 hl.bind(mainMod .. "+E",       hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. "+V",       hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. "+D",       hl.dsp.exec_cmd(ipc .. " panel-toggle launcher"))
+hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher"))
 hl.bind(mainMod .. "+P",       hl.dsp.window.pseudo())
 hl.bind(mainMod .. "+SHIFT+J", hl.dsp.layout("togglesplit"))
 
@@ -226,3 +227,29 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+
+
+
+---------------------
+-- NOCTALIA SETTINGS
+---------------------
+
+hl.window_rule({
+    match = { class = "dev.noctalia.Noctalia" },
+    float = true,
+    size = { 1080, 920 },
+})
+
+-- Disable Hyprland built-in layer animations
+hl.layer_rule({
+  name = "noctalia",
+  match = {
+    namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$",
+  },
+  no_anim = true,
+  ignore_alpha = 0.5,
+  blur = true,
+  blur_popups = true,
+})
+require("noctalia").apply_theme()
