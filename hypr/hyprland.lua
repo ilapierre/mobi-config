@@ -10,13 +10,29 @@ local ipc         = "noctalia msg "
 local mainMod     = "SUPER"
 
 ------------------
+-- MONITORS
+------------------
+
+-- LG UltraGear 3440x1440, native panel does 160Hz and HDR10 (BT.2020 + ST2084 PQ, ~408 nit peak)
+hl.monitor({
+    output   = "DP-2",
+    mode     = "3440x1440@160",
+    position = "0x0",
+    scale    = 1,
+    bitdepth = 10,
+    cm       = "srgb", -- accurate desktop colors; this panel doesn't cover enough of BT.2020 for "wide"/"auto" to look right at idle
+    vrr      = 1,       -- confirmed working: panel does support adaptive sync over DP
+})
+
+------------------
 -- ENVIRONMENT VARIABLES
 ------------------
 
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
-hl.env("LIBVA_DRIVER_NAME",    "iHD")
-hl.env("VDPAU_DRIVER",         "va_gl")
+hl.env("LIBVA_DRIVER_NAME",    "nvidia")
 hl.env("MOZ_ENABLE_WAYLAND",   "1")
+hl.env("GBM_BACKEND",          "nvidia-drm")
+hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 
 ------------------
 -- AUTOSTART
@@ -69,6 +85,9 @@ hl.config({
     misc = {
         force_default_wallpaper = -1,
         disable_hyprland_logo   = false,
+    },
+    render = {
+        cm_auto_hdr = 1, -- fullscreen apps that request HDR (games, mpv/browser video) get switched to real HDR automatically
     },
     input = {
         kb_layout  = "us,ca",
@@ -194,6 +213,9 @@ hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = tr
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
+
+-- Session control
+hl.bind(mainMod .. "+L",       hl.dsp.exec_cmd(ipc .. " session lock"))
 
 -- Screenshot
 hl.bind("ALT+P", hl.dsp.exec_cmd("hyprshot -m region"))

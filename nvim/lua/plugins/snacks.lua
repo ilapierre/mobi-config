@@ -18,7 +18,8 @@ return {
   keys = {
     -- Find
     { "<leader>fb", function() Snacks.picker.buffers() end,                                 desc = "Buffers" },
-    { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
+    -- { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
+    { "<leader>fc", function() Snacks.picker.colorschemes() end, desc = "Find Colorschemes" },
     { "<leader>ff", function() Snacks.picker.files() end,                                   desc = "Find Files" },
     { "<leader>fg", function() Snacks.picker.grep() end,                                    desc = "Grep" },
     { "<leader>fp", function() Snacks.picker.projects() end,                                desc = "Projects" },
