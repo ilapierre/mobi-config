@@ -215,7 +215,7 @@ hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 -- Session control
-hl.bind(mainMod .. "+L",       hl.dsp.exec_cmd(ipc .. " session lock"))
+-- hl.bind(mainMod .. "+L",       hl.dsp.exec_cmd(ipc .. " session lock"))
 
 -- Screenshot
 hl.bind("ALT+P", hl.dsp.exec_cmd("hyprshot -m region"))

@@ -4,8 +4,8 @@ vim.opt.relativenumber = true
 
 vim.opt.clipboard:append { 'unnamed', 'unnamedplus' }
 
--- vim.cmd.colorscheme "base16-0x96f"
-vim.cmd.colorscheme "no-clown-fiesta-light"
+vim.cmd.colorscheme "base16-0x96f"
+-- vim.cmd.colorscheme "no-clown-fiesta-light"
 -- vim.cmd.colorscheme "no-clown-fiesta"
 
 vim.opt.cmdheight = 0

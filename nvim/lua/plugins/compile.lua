@@ -14,6 +14,7 @@ return {
 		}
 	end,
 	keys = {
-		{ "<leader>c", "<cmd>below Compile<cr>", desc = "Open Oil (floating)" },
+		{ "<leader>c", "<cmd>below Compile<cr>", desc = "Compile" },
+		{ "<leader>C", "<cmd>below Recompile<cr>", desc = "Recompile" },
 	},
 }

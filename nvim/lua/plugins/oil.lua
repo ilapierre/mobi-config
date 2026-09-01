@@ -9,6 +9,9 @@ return {
 				-- "size",
 				"mtime",
 			},
+      view_options = {
+        show_hidden = true,
+      },
 			delete_to_trash = true,
 		},
 		config = true,
